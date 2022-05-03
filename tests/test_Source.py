@@ -1,5 +1,5 @@
 import unittest
-from app.models import Sources,Articles
+from app.models import Sources
 
 class SourceTest(unittest.TestCase):
     '''
@@ -15,15 +15,3 @@ class SourceTest(unittest.TestCase):
 
 
 
-
-class ArticlesTest(unittest.TestCase):
-    '''
-    to test the behavior of the source class
-    '''
-    def setUp(self):
-        '''
-        Set up method that will run before every Test
-        '''
-        self.new_article = Articles("What","allan","killer","/kill.jpeg","terrible",21/9/2020)
-    def test_instance(self):
-        self.assertTrue(isinstance(self.new_article,Articles))
