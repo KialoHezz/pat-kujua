@@ -1,6 +1,6 @@
+from app import create_app
 import urllib.request,json
 from .models import Articles,Sources
-from app import create_app
 
 api_key = None
 base_url = None
@@ -14,8 +14,9 @@ def configure_request(app):
     base_url = app.config['NEW_BASE_URL_SOURCES']
     base_url_top_headlines = app.config['NEWS_BASE_HEADLINES_URL']
 
-def get_sources():
-    sources_url = base_url.format(api_key)
+def get_sources(category):
+    sources_url = base_url.format(category,api_key)
+
     with urllib.request.urlopen(sources_url) as url:
         sources_url_data = url.read()
         sources_url_response = json.loads(sources_url_data)
@@ -23,8 +24,8 @@ def get_sources():
 
         source_results = None
 
-        if sources_url_response['result']:
-            source_results_list = sources_url_response['result']
+        if sources_url_response['articles']:
+            source_results_list = sources_url_response['articles']
             source_results = process_results(source_results_list)
 
     return source_results  
@@ -41,12 +42,9 @@ def process_results(sources_list):
         publishedAt = source.get("publishedAt")
 
 
-        if name:
+        if urlToImage:
             source_object = Sources(id, name, urlToImage, description, publishedAt)
             source_result.append(source_object)
 
 
     return source_result
-
-
-

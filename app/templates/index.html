@@ -1,1 +1,10 @@
 {%extends 'base.html'%}
+<div>
+    {%for news in Source %}
+    <li>{{news.id}}</li>
+    <li>{{news.name}}</li>
+    <li>{{news.urlToImage}}</li>
+    <li>{{news.description}}</li>
+    <li>{{news.publishedAt}}</li>
+    {%endfor%}
+</div>
