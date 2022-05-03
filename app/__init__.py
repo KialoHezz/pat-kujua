@@ -2,6 +2,10 @@ from config import config_options
 from flask import Flask
 from flask_bootstrap import Bootstrap
 
+# create the app configurations
+bootstrap = Bootstrap()
+
+
 def create_app(config_name):
     app =  Flask (__name__)
     # create app configuration
@@ -11,9 +15,8 @@ def create_app(config_name):
     from .main  import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
-    # create the app configurations
-  
-    bootstrap = Bootstrap(app)
+    # Initializing flask extensions
+    bootstrap.init_app(app)
 
     # setting the configuration
     from .requests import configure_request
