@@ -1,4 +1,3 @@
-from unicodedata import category
 from app import create_app
 import urllib.request,json
 from .models import Articles,Sources
@@ -16,7 +15,7 @@ def configure_request(app):
     base_url_top_headlines = app.config['NEWS_BASE_HEADLINES_URL']
 
 def get_sources():
-    sources_url = base_url.format(category,api_key)
+    sources_url = base_url.format(api_key)
     with urllib.request.urlopen(sources_url) as url:
         sources_url_data = url.read()
         sources_url_response = json.loads(sources_url_data)

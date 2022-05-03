@@ -1,14 +1,14 @@
-# PAT_KUJUA
+### PAT_KUJUA
 Built By Hezron Ngoma.
 
-# Description
+### Description
 PAT_KUJUA 
 
 User Stories
 These are the behaviours/features that the application implements for use by a user.
 
 
-# Open your terminal
+### Open your terminal
 
 Copy the link to my github.
 Paste to your terminal.
@@ -22,12 +22,12 @@ To run the application, in your terminal:
   $ chmod a+x start.py
   $ ./start.py
 
-# Testing the Application
+### Testing the Application
 To run the tests for the class file:
   $ python3.8
 
 
-# Technologies Used
+### Technologies Used
   $ Python3.8
   $ Bootstrap
   $ 

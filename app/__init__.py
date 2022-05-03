@@ -13,7 +13,7 @@ def create_app(config_name):
 
     # create the app configurations
   
-    Bootstrap.init_app(app)
+    bootstrap = Bootstrap(app)
 
     # setting the configuration
     from .requests import configure_request
@@ -24,5 +24,5 @@ def create_app(config_name):
     return app
 
 
-from .main import views
-from .main import errors
+# from .main import views
+# from .main import errors
