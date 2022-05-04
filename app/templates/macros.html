@@ -1,1 +1,20 @@
-<!-- {%macro displayMessage()%} -->
+{%macro displaysources(source_list)%}
+
+{% for source in source_list %}
+<h1>{{source.id}}</h1>
+<h2><b>{{source.name}}</b></h2>
+<p>{{source.urlToImage}}</p>
+<p>{{source.description}}</p>
+<p>{{source.publishedAt}}</p>
+{%endfor%}
+{%endmacro%}
+
+{%macro displayArticles(article_result_list)%}
+{%for article in article_result_list%}
+<p>{{article.author}}</p>
+<p>{{article.title}}</p>
+<p>{{article.urlToImage}}</p>
+<p>{{article.description}}</p>
+<p>{{article.publishedAt}}</p>
+{%endfor%}
+{%endmacro%}

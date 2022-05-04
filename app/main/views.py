@@ -1,16 +1,15 @@
 from flask import render_template,request,redirect,url_for
 from . import main
-from ..requests import get_sources
+from ..requests import get_sources,get_articles
 
 @main.route('/')
 def index():
-    id = get_sources('id')
-    name = get_sources('name')
-    urlToImage = get_sources('urlToImage')
-    description = get_sources('description')
-    publishedAt = get_sources('publishedAt')
+    source = get_sources()
+    # articles = get_articles()
+    
+    return render_template('index.html',source=source)
 
-    return render_template('index.html',id=id, name=name,urlToImage=urlToImage,description=description,publishedAt=publishedAt)
+
 
 @main.route('/')
 def home_page():

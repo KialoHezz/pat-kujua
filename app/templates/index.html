@@ -1,10 +1,6 @@
-{%extends 'base.html'%}
-<div>
-    {%for news in Source %}
-    <li>{{news.id}}</li>
-    <li>{{news.name}}</li>
-    <li>{{news.urlToImage}}</li>
-    <li>{{news.description}}</li>
-    <li>{{news.publishedAt}}</li>
-    {%endfor%}
-</div>
+{% import 'macros.html' as macro%}
+<h3>Source</h3>
+{{macro.displaysources(source)}}
+<hr />
+<h3>Article</h3>
+{{macro.displayArticles(source)}}
