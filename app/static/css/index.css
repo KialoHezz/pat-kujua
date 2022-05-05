@@ -3,6 +3,34 @@ body{
     height: 100vh;
 }
 
-.dcard{
-    display: flex;
+.header-base{
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+    padding:10px 0;
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: xx-large;
 }
+
+.movingtext{
+    color: #fff;
+}
+
+.navbar{
+    display: flex;
+    height: 3rem;
+    background-color: rgba(255, 0, 0, 0.541);
+}
+
+.nav-a{
+    text-decoration: none;
+    list-style: none;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+/* .cardd{
+    display: flex;
+    height: 50rem;
+} */
