@@ -1,5 +1,7 @@
 {%extends 'base.html'%} {% import 'macros.html' as macro%} {%block content%}
-<div>{{macro.displaysources(source)}}</div>
+<h3 class="I-title">Source</h3>
+<div class="dis">{{macro.displaysources(source)}}</div>
 <hr />
-<div>{{macro.displayArticles(source)}}</div>
+<h3 class="I-title">Article</h3>
+<div class="dis">{{macro.displayArticles(source)}}</div>
 {%endblock%}

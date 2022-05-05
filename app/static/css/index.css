@@ -30,17 +30,31 @@ body {
   text-transform: uppercase;
 }
 
-
-
 .cardstyle {
   margin-top: 1.2rem;
   margin-left: 3rem;
   width: 25rem;
+  height: 15rem;
 }
 
-.footer{
-    height: 20rem;
-    background-color: rgb(23, 40, 25);
-    color: #fff;
+.I-title{
     text-align: center;
+    color: #fff;
+}
+
+.dis {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer {
+  height: 12rem;
+  background-color: rgb(23, 40, 25);
+  color: #fff;
+  text-align: center;
+  margin-top: 4rem;
 }
