@@ -1,13 +1,5 @@
-{%extends 'base.html'%}
-{% import 'macros.html' as macro%}
-
-
-{%block content%}
-   <div class="container">
-        {{macro.displaysources(source)}}
-   </div>
-    <hr />
-    <h3>Article</h3>
-    {{macro.displayArticles(source)}}
+{%extends 'base.html'%} {% import 'macros.html' as macro%} {%block content%}
+<div>{{macro.displaysources(source)}}</div>
+<hr />
+<div>{{macro.displayArticles(source)}}</div>
 {%endblock%}
-

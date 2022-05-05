@@ -1,9 +1,8 @@
 {%macro displaysources(source_list)%} {% for source in source_list %}
 
-<div class="card" style="width: 18rem">
+<div class="card cardstyle">
   <img src="{{source.urlToImage}}" class="card-img-top" alt="..." />
   <div class="card-body">
-    <h3 class="card-title">{{source.id}}</h3>
     <h5 class="card-title">{{source.name}}</h5>
     <p class="card-text">{{source.description}}</p>
     <p class="card-text">{{source.publishedAt}}</p>
@@ -13,7 +12,7 @@
 {%endfor%} {%endmacro%} {%macro displayArticles(article_result_list)%} {%for
 article in article_result_list%}
 
-<div class="card" style="width: 18rem">
+<div class="card cardstyle">
   <h5 class="card-title">{{article.title}}</h5>
   <p class="card-text">{{article.author}}</p>
   <img src="{{article.urlToImage}}" class="card-img-top" alt="..." />
